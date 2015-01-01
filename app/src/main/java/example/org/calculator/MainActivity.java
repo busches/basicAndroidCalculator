@@ -52,6 +52,14 @@ public class MainActivity extends ActionBarActivity {
                 result.setText(Float.toString(total));
             }
         });
+
+        multiply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                float total = getOperand1() * getOperand2();
+                result.setText(Float.toString(total));
+            }
+        });
     }
 
     private Float getOperand1() {
