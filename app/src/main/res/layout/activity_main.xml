@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="/"
-            android:id="@+id/division"
+            android:id="@+id/divide"
             android:layout_column="7" />
     </TableRow>
 

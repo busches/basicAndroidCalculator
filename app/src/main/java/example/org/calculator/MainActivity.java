@@ -4,10 +4,16 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.EditText;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    Button plus;
+    Button minus;
+    Button multiply;
+    Button divide;
 
     EditText operand1;
     EditText operand2;
@@ -16,6 +22,11 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        plus = (Button) findViewById(R.id.plus);
+        minus = (Button) findViewById(R.id.minus);
+        multiply = (Button) findViewById(R.id.multiply);
+        divide = (Button) findViewById(R.id.divide);
 
         operand1 = (EditText) findViewById(R.id.operand1);
         operand2 = (EditText) findViewById(R.id.operand2);
