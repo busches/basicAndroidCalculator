@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -35,6 +36,16 @@ public class MainActivity extends ActionBarActivity {
         operand2 = (EditText) findViewById(R.id.operand2);
 
         result = (TextView) findViewById(R.id.result);
+
+        plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                float oper1 = Float.parseFloat(operand1.getText().toString());
+                float oper2 = Float.parseFloat(operand2.getText().toString());
+                float total = oper1 + oper2;
+                result.setText(Float.toString(total));
+            }
+        });
     }
 
     @Override
