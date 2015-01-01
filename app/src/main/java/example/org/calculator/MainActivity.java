@@ -71,11 +71,13 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private Float getOperand1() {
-        return Float.parseFloat(operand1.getText().toString());
+        String value = operand1.getText().toString();
+        return value.length() > 0 ? Float.parseFloat(value) : 0f;
     }
 
     private Float getOperand2() {
-        return Float.parseFloat(operand2.getText().toString());
+        String value = operand2.getText().toString();
+        return value.length() > 0 ? Float.parseFloat(value) : 0f;
     }
 
     @Override
