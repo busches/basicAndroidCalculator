@@ -4,16 +4,22 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    EditText operand1;
+    EditText operand2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
+        operand1 = (EditText) findViewById(R.id.operand1);
+        operand2 = (EditText) findViewById(R.id.operand2);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
