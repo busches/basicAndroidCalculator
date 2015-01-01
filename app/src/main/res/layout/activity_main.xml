@@ -70,6 +70,14 @@
             android:text="/"
             android:id="@+id/divide"
             android:layout_column="7" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clr"
+            android:id="@+id/clear"
+            android:layout_column="9"
+            style="?android:buttonStyleSmall" />
     </TableRow>
 
 

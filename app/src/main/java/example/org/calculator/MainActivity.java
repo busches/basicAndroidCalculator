@@ -16,6 +16,7 @@ public class MainActivity extends ActionBarActivity {
     Button minus;
     Button multiply;
     Button divide;
+    Button clear;
 
     EditText operand1;
     EditText operand2;
@@ -31,6 +32,7 @@ public class MainActivity extends ActionBarActivity {
         minus = (Button) findViewById(R.id.minus);
         multiply = (Button) findViewById(R.id.multiply);
         divide = (Button) findViewById(R.id.divide);
+        clear = (Button) findViewById(R.id.clear);
 
         operand1 = (EditText) findViewById(R.id.operand1);
         operand2 = (EditText) findViewById(R.id.operand2);
@@ -66,6 +68,15 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 float total = getOperand1() / getOperand2();
                 result.setText(Float.toString(total));
+            }
+        });
+
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                operand1.setText("");
+                operand2.setText("");
+                result.setText("0.0");
             }
         });
     }
