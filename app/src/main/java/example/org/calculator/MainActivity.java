@@ -40,12 +40,26 @@ public class MainActivity extends ActionBarActivity {
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                float oper1 = Float.parseFloat(operand1.getText().toString());
-                float oper2 = Float.parseFloat(operand2.getText().toString());
-                float total = oper1 + oper2;
+                float total = getOperand1() + getOperand2();
                 result.setText(Float.toString(total));
             }
         });
+
+        minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                float total = getOperand1() - getOperand2();
+                result.setText(Float.toString(total));
+            }
+        });
+    }
+
+    private Float getOperand1() {
+        return Float.parseFloat(operand1.getText().toString());
+    }
+
+    private Float getOperand2() {
+        return Float.parseFloat(operand2.getText().toString());
     }
 
     @Override
