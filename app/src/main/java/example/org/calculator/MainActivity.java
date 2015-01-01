@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -17,6 +18,8 @@ public class MainActivity extends ActionBarActivity {
 
     EditText operand1;
     EditText operand2;
+
+    TextView result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,8 @@ public class MainActivity extends ActionBarActivity {
 
         operand1 = (EditText) findViewById(R.id.operand1);
         operand2 = (EditText) findViewById(R.id.operand2);
+
+        result = (TextView) findViewById(R.id.result);
     }
 
     @Override
